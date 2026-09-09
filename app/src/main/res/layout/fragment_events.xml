@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/events_title" android:textSize="28sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/events_subtitle" android:textSize="13sp" android:textColor="@color/text_secondary"/>
+
+            <TextView android:id="@+id/offlineBanner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:padding="12dp" android:background="@drawable/bg_timeline_pill" android:textColor="@color/urgency_amber" android:visibility="gone"/>
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardNextEvent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/surface_2" app:strokeWidth="1dp" app:strokeColor="@color/brand">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="20dp">
+                    <ImageView android:id="@+id/imageNextEvent" android:layout_width="52dp" android:layout_height="52dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next_event" android:textAllCaps="true" android:textColor="@color/brand" android:textStyle="bold" android:textSize="11sp"/>
+                        <TextView android:id="@+id/textNextEventName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textSize="21sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary"/>
+                        <TextView android:id="@+id/textNextEventTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/textNextEventCountdown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/accent"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/timeline" android:textSize="16sp" android:textStyle="bold"/>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:scrollbars="none">
+                <LinearLayout android:id="@+id/timelineContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal"/>
+            </HorizontalScrollView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/filter_events" android:textSize="16sp" android:textStyle="bold"/>
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupFilter" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:singleSelection="true" app:selectionRequired="true">
+                <com.google.android.material.chip.Chip android:id="@+id/chipAll" style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter_all"/>
+                <com.google.android.material.chip.Chip android:id="@+id/chipChaos" style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Double Chaos"/>
+                <com.google.android.material.chip.Chip android:id="@+id/chipOvercharged" style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Overcharged"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/upcoming" android:textSize="16sp" android:textStyle="bold"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerEvents" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:nestedScrollingEnabled="false"/>
+            <TextView android:id="@+id/textEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="28dp" android:text="@string/no_events" android:textColor="@color/text_secondary" android:visibility="gone"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/history" android:textSize="16sp" android:textStyle="bold"/>
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="24dp" app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/surface">
+                <TextView android:id="@+id/textHistoryValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:lineSpacingExtra="6dp" android:textColor="@color/text_secondary"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbarDetail" android:layout_width="match_parent" android:layout_height="64dp" app:navigationIcon="@android:drawable/ic_media_previous" app:title="@string/event_details"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <ImageView android:id="@+id/imageDetailEvent" android:layout_width="68dp" android:layout_height="68dp"/>
+            <TextView android:id="@+id/textDetailTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textSize="28sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/textDetailTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/brand" android:textStyle="bold"/>
+            <TextView android:id="@+id/textDetailDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:textColor="@color/text_secondary" android:textSize="15sp" android:lineSpacingExtra="5dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="@string/alerts_for_this_event" android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/alerts_type_hint" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+            <CheckBox android:id="@+id/check15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fifteen_minutes"/>
+            <CheckBox android:id="@+id/check10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ten_minutes"/>
+            <CheckBox android:id="@+id/check5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/five_minutes"/>
+            <CheckBox android:id="@+id/checkStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on_start"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveEventAlerts" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/save_event_alerts"/>
+            <TextView android:id="@+id/textSaved" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="@string/saved" android:textColor="@color/success" android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

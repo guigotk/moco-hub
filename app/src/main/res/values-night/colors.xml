@@ -1,0 +1,19 @@
+<resources>
+    <color name="bg">#080A12</color>
+    <color name="surface">#101421</color>
+    <color name="surface_2">#151A2A</color>
+    <color name="brand">#B06CFF</color>
+    <color name="brand_strong">#8B3DFF</color>
+    <color name="accent">#C8FF45</color>
+    <color name="text_primary">#F7F5FF</color>
+    <color name="text_secondary">#A9A7BD</color>
+    <color name="divider">#292E43</color>
+    <color name="urgency_amber">#FFC857</color>
+    <color name="urgency_red">#FF5C73</color>
+    <color name="success">#31E6A1</color>
+    <color name="profile_header">#21103F</color>
+    <color name="rating_gold">#FFC400</color>
+    <color name="rating_blue">#43C9FF</color>
+    <color name="rating_purple">#A978FF</color>
+    <color name="rating_green">#27E5A3</color>
+</resources>

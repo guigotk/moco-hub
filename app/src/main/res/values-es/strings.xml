@@ -1,0 +1,35 @@
+<resources>
+ <string name="app_name">mo.co hub</string><string name="settings">Configuración</string><string name="nav_home">Inicio</string><string name="nav_events">Eventos</string><string name="nav_weapons">Armas</string>
+ <string name="home_greeting">Hola, Hunter.</string><string name="home_subtitle">Eventos, noticias y herramientas en un solo lugar.</string><string name="next_event">Próximo evento</string><string name="view">Ver</string><string name="news">Noticias</string><string name="news_source_hint">Últimas novedades de la comunidad de mo.co.</string>
+ <string name="events_loading_short">Actualizando eventos…</string><string name="pull_to_refresh_events">Abre Eventos y desliza para actualizar</string><string name="starts_in_minutes">Empieza en %1$d min</string><string name="in_minutes">en %1$d min</string><string name="live_now">EN VIVO</string>
+ <string name="events_title">Eventos</string><string name="events_subtitle">Mira el ritmo del día y elige exactamente qué alertas quieres recibir.</string><string name="offline_cache_age">Sin conexión • mostrando la última lista guardada, actualizada hace %1$d min</string>
+ <string name="timeline">Línea de tiempo</string><string name="filter_events">Filtrar eventos</string><string name="filter_all">Todos</string><string name="upcoming">Próximos</string><string name="history">Eventos recientes</string><string name="no_history">El historial aparecerá aquí a medida que pasen los eventos.</string><string name="no_events">No se encontraron eventos. Desliza para actualizar.</string>
+ <string name="event_details">Detalles del evento</string><string name="alerts_for_this_event">Alertas para este tipo de evento</string><string name="chaos_description">Double Chaos Energy es un evento temporal que aumenta la Chaos Energy obtenida al cazar monstruos y ayuda a progresar más rápido en los caminos de temporada.</string><string name="overcharged_description">Durante Overcharged Alert, los monstruos Overcharged aparecen con mucha más frecuencia durante un período corto. Son más fuertes y pueden dar mejores recompensas.</string><string name="generic_event_description">Evento mundial de mo.co. Consulta el juego para confirmar los efectos y reglas actuales.</string>
+ <string name="fifteen_minutes">15 minutos antes</string><string name="ten_minutes">10 minutos antes</string><string name="five_minutes">5 minutos antes</string><string name="on_start">Cuando empiece</string><string name="save_event_alerts">Guardar alertas de este evento</string><string name="saved">Guardado ✓</string>
+ <string name="appearance">Apariencia</string><string name="theme_system">Igual que el sistema</string><string name="theme_light">Claro</string><string name="theme_dark">Oscuro</string><string name="language">Idioma</string><string name="apply">Aplicar</string><string name="preferences_saved">Preferencias guardadas.</string>
+ <string name="contact">Contacto</string><string name="support">Soporte</string><string name="support_subtitle">Hablar con Guigo por correo</string><string name="partners">Socios</string><string name="partner_x_subtitle">Abrir perfil en X / Twitter</string><string name="partner_instagram_subtitle">Abrir perfil en Instagram</string><string name="partner_youtube_subtitle">Abrir canal de YouTube</string>
+ <string name="donations">Donaciones</string><string name="paypal_subtitle">Apoyar por PayPal</string><string name="pix_subtitle">Copiar clave PIX</string><string name="about">Acerca de</string><string name="credits">Acerca de mo.co hub</string><string name="credits_subtitle">Consulta de dónde proviene la información</string><string name="watermark_text">Desarrollado por Guigo.</string>
+ <string name="configure_partner_link">Agrega este enlace de socio en AppLinks.kt.</string>
+ <string name="configure_paypal">Agrega tu enlace de PayPal en AppLinks.kt.</string><string name="configure_pix">Agrega tu clave PIX en AppLinks.kt.</string><string name="configure_email">Agrega tu correo de soporte en AppLinks.kt.</string><string name="no_email_app">No hay una app de correo disponible.</string><string name="pix_copied">Clave PIX copiada.</string>
+ <string name="credits_intro">Los horarios de eventos y las estadísticas del jugador usan páginas públicas de CellString. La pantalla de inicio muestra el feed público de @joinmocobrasil en X. Las descripciones y referencias generales usan materiales de mo.co/Supercell y fuentes comunitarias cuando corresponde. Esta es una aplicación comunitaria independiente.</string><string name="fan_disclaimer">mo.co hub no está afiliado, patrocinado ni aprobado por Supercell. mo.co y los materiales relacionados pertenecen a sus respectivos propietarios.</string>
+ <string name="widget_no_event">No hay evento guardado</string><string name="open_app_refresh">Abre la app para actualizar</string><string name="widget_eta">en %1$d min • %2$s</string>
+ <string name="notification_started">¡El evento ha comenzado!</string>
+ <string name="notification_in_minutes">Empieza en %1$d minutos</string>
+ <string name="weapons_title">Armas</string>
+ <string name="weapons_subtitle">Consulta habilidades e información guardada en la app.</string>
+ <string name="alerts_type_hint">Desmarca todas las opciones para silenciar este tipo de evento.</string>
+
+ <string name="nav_profile">Perfil</string>
+ <string name="community_news">Noticias de la comunidad</string>
+ <string name="community_news_subtitle">Últimas publicaciones de @joinmocobrasil en X.</string>
+ <string name="open_x">Abrir X</string>
+ <string name="x_feed_note">Feed proporcionado por X. Si no carga, usa “Abrir X”.</string>
+ <string name="profile_title">Perfil</string><string name="profile_subtitle">Tu espacio dentro de mo.co hub.</string>
+ <string name="change_photo">Cambiar foto</string><string name="name">Nombre</string><string name="age">Edad</string><string name="bio">Bio corta</string><string name="game_id">ID del juego</string>
+ <string name="save_profile">Guardar perfil</string><string name="profile_saved">Perfil guardado.</string><string name="enter_game_id">Introduce el ID del juego.</string>
+ <string name="game_stats">Estadísticas del juego</string><string name="game_stats_source">Perfil público cargado desde CellString.</string><string name="update">Actualizar</string>
+ <string name="cellstring_note">Las estadísticas se muestran desde la página pública de jugador de CellString.</string>
+ <string name="discord_br_subtitle">Entrar al servidor brasileño/portugués</string><string name="discord_quantum_subtitle">Entrar al servidor de Quantum</string>
+ <string name="paypal_unavailable">PayPal todavía no está disponible.</string>
+
+</resources>

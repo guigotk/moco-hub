@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Olá, Hunter." android:textSize="30sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Eventos, temporada e comunidade em um só lugar." android:textColor="@color/text_secondary" android:textSize="14sp"/>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" app:cardCornerRadius="26dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/surface_2" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="20dp">
+                <ImageView android:id="@+id/imageNextEvent" android:layout_width="54dp" android:layout_height="54dp" android:src="@drawable/ic_event_chaos"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PRÓXIMO EVENTO" android:textStyle="bold" android:textColor="@color/brand" android:textSize="11sp"/>
+                    <TextView android:id="@+id/textNextEventName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Carregando…" android:textSize="20sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/textNextEventEta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnOpenEvents" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VER" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEMPORADA" android:textStyle="bold" android:textColor="@color/brand" android:textSize="11sp"/>
+                <TextView android:id="@+id/textSeasonTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Temporada 4" android:textStyle="bold" android:textSize="19sp"/>
+                <TextView android:id="@+id/textSeasonCountdown" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                <ProgressBar android:id="@+id/progressSeason" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="12dp" android:max="100" android:progress="50"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Acesso rápido" android:textSize="20sp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp" android:weightSum="2">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardEliteContracts" android:layout_width="0dp" android:layout_height="120dp" android:layout_weight="1" android:layout_marginEnd="6dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="bottom" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ELITE" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contracts" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Leaderboard →" android:textColor="@color/text_secondary" android:textSize="11sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardQuickProfile" android:layout_width="0dp" android:layout_height="120dp" android:layout_weight="1" android:layout_marginStart="6dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="bottom" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HUNTER" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Meu perfil" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver status →" android:textColor="@color/text_secondary" android:textSize="11sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Comunidade" android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Parceiros e comunidades do mo.co" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp" android:weightSum="2">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardPartnerX" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:layout_marginEnd="6dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="15dp" android:gravity="bottom"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="joinmocobrasil" android:textStyle="bold" android:textSize="15sp" android:layout_marginTop="4dp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abrir perfil →" android:textColor="@color/text_secondary" android:textSize="10sp" android:layout_marginTop="3dp"/></LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardPartnerInstagram" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:layout_marginStart="6dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="15dp" android:gravity="bottom"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INSTAGRAM" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="joinmocohub" android:textStyle="bold" android:textSize="15sp" android:layout_marginTop="4dp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abrir perfil →" android:textColor="@color/text_secondary" android:textSize="10sp" android:layout_marginTop="3dp"/></LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp" android:weightSum="2">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardPartnerDiscordBr" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:layout_marginEnd="6dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="15dp" android:gravity="bottom"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DISCORD" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mo.co BR/PT" android:textStyle="bold" android:textSize="15sp" android:layout_marginTop="4dp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Entrar →" android:textColor="@color/text_secondary" android:textSize="10sp" android:layout_marginTop="3dp"/></LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardPartnerQuantum" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:layout_marginStart="6dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="15dp" android:gravity="bottom"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DISCORD" android:textColor="@color/brand" android:textStyle="bold" android:textSize="10sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quantum" android:textStyle="bold" android:textSize="15sp" android:layout_marginTop="4dp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Entrar →" android:textColor="@color/text_secondary" android:textSize="10sp" android:layout_marginTop="3dp"/></LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notícias" android:textSize="20sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Uma matéria em destaque" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAllNews" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VER TODAS" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+
+        <ProgressBar android:id="@+id/progressHome" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="center_horizontal" android:layout_marginTop="10dp"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/listNews" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" android:layout_marginTop="6dp"/>
+        <TextView android:id="@+id/textNewsStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="12dp" android:textColor="@color/text_secondary" android:textSize="11sp" android:gravity="center"/>
+    </LinearLayout>
+</ScrollView>

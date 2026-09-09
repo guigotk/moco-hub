@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+ <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbarCredits" android:layout_width="match_parent" android:layout_height="64dp" app:navigationIcon="@android:drawable/ic_media_previous" app:title="@string/credits"/>
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+   <TextView android:id="@+id/textAppVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/text_primary"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/credits_intro" android:textSize="15sp" android:lineSpacingExtra="5dp" android:textColor="@color/text_secondary"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnCellStringEvents" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="CellString — Events"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnCellString" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="CellString — mo.co"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnXSource" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="X — @joinmocobrasil"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnCellStringPlayer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="CellString — Player stats"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnMoco" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="mo.co / Supercell"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnGithub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="GitHub — código do projeto"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/fan_disclaimer" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="36dp" android:gravity="center" android:text="@string/watermark_text" android:textStyle="bold"/>
+  </LinearLayout>
+ </ScrollView>
+</LinearLayout>

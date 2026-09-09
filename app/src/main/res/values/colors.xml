@@ -1,0 +1,20 @@
+<resources>
+    <!-- Light theme palette -->
+    <color name="bg">#F7F5FC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_2">#F0ECF8</color>
+    <color name="brand">#7C3AED</color>
+    <color name="brand_strong">#6D28D9</color>
+    <color name="accent">#72A500</color>
+    <color name="text_primary">#17131F</color>
+    <color name="text_secondary">#665F73</color>
+    <color name="divider">#DDD6EA</color>
+    <color name="urgency_amber">#B86C00</color>
+    <color name="urgency_red">#C92E4A</color>
+    <color name="success">#087A55</color>
+    <color name="profile_header">#EDE3FF</color>
+    <color name="rating_gold">#A66A00</color>
+    <color name="rating_blue">#087EA4</color>
+    <color name="rating_purple">#7545D6</color>
+    <color name="rating_green">#087A55</color>
+</resources>

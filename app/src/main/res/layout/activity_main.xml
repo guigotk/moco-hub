@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="?android:attr/colorBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent" android:layout_height="64dp"
+        android:paddingStart="12dp" android:paddingEnd="8dp"
+        app:title="@string/app_name" app:titleTextColor="?android:attr/textColorPrimary"
+        app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:background="@color/bg" app:elevation="0dp">
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/ic_settings_clean" android:padding="12dp"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <FrameLayout android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface_2" app:elevation="0dp" app:itemIconTint="@color/bottom_nav_tint"
+        app:itemTextColor="@color/bottom_nav_tint" app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"/>
+</LinearLayout>

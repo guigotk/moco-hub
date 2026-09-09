@@ -1,0 +1,37 @@
+<resources>
+ <string name="app_name">mo.co hub</string><string name="settings">Settings</string><string name="nav_home">Home</string><string name="nav_events">Events</string><string name="nav_weapons">Weapons</string>
+ <string name="home_greeting">Hello, Hunter.</string><string name="home_subtitle">Events, news and tools in one place.</string><string name="next_event">Next event</string><string name="view">View</string><string name="news">News</string><string name="news_source_hint">Latest updates from the mo.co community.</string>
+ <string name="events_loading_short">Updating events…</string><string name="pull_to_refresh_events">Open Events and pull to refresh</string><string name="starts_in_minutes">Starts in %1$d min</string><string name="in_minutes">in %1$d min</string><string name="live_now">LIVE</string>
+ <string name="events_title">Events</string><string name="events_subtitle">See today’s rhythm and choose exactly what you want to be notified about.</string><string name="offline_cache_age">Offline • showing last saved list, updated %1$d min ago</string>
+ <string name="timeline">Timeline</string><string name="filter_events">Filter events</string><string name="filter_all">All</string><string name="upcoming">Upcoming</string><string name="history">Recent events</string><string name="no_history">History will appear here as events pass.</string><string name="no_events">No events found. Pull to refresh.</string>
+ <string name="event_details">Event details</string><string name="alerts_for_this_event">Alerts for this event type</string><string name="chaos_description">Double Chaos Energy is a limited-time event that boosts Chaos Energy earned from monster hunting, helping you progress through Seasonal Paths faster.</string><string name="overcharged_description">During Overcharged Alert, Overcharged monsters appear much more often for a short period. They are stronger and may offer better rewards.</string><string name="generic_event_description">A mo.co world event. Check the game for the latest effects and rules.</string>
+ <string name="fifteen_minutes">15 minutes before</string><string name="ten_minutes">10 minutes before</string><string name="five_minutes">5 minutes before</string><string name="on_start">When it starts</string><string name="save_event_alerts">Save alerts for this event</string><string name="saved">Saved ✓</string>
+ <string name="appearance">Appearance</string><string name="theme_system">Follow system</string><string name="theme_light">Light</string><string name="theme_dark">Dark</string><string name="language">Language</string><string name="apply">Apply</string><string name="preferences_saved">Preferences saved.</string>
+ <string name="contact">Contact</string><string name="support">Support</string><string name="support_subtitle">Email Guigo</string><string name="partners">Partners</string><string name="partner_x_subtitle">Open profile on X / Twitter</string><string name="partner_instagram_subtitle">Open Instagram profile</string><string name="partner_youtube_subtitle">Open YouTube channel</string>
+ <string name="donations">Donations</string><string name="paypal_subtitle">Support via PayPal</string><string name="pix_subtitle">Copy PIX key</string><string name="about">About</string><string name="credits">Credits &amp; sources</string><string name="credits_subtitle">Version, sources, GitHub and disclaimer</string><string name="watermark_text">Developed by Guigo.</string>
+ <string name="configure_partner_link">Add this partner link in AppLinks.kt.</string>
+ <string name="configure_paypal">Add your PayPal link in AppLinks.kt.</string><string name="configure_pix">Add your PIX key in AppLinks.kt.</string><string name="configure_email">Add your support email in AppLinks.kt.</string><string name="no_email_app">No email app available.</string><string name="pix_copied">PIX key copied.</string>
+ <string name="credits_intro">Event times and player stats use public CellString pages. The Home screen displays the public @joinmocobrasil feed from X. Descriptions and general references use mo.co/Supercell materials and community sources where noted. This is an independent community app.</string><string name="fan_disclaimer">mo.co hub is not affiliated with, sponsored or approved by Supercell. mo.co and related materials belong to their respective owners.</string>
+ <string name="widget_no_event">No cached event</string><string name="open_app_refresh">Open the app to refresh</string><string name="widget_eta">in %1$d min • %2$s</string>
+ <string name="notification_started">The event has started!</string>
+ <string name="notification_in_minutes">Starts in %1$d minutes</string>
+ <string name="weapons_title">Weapons</string>
+ <string name="weapons_subtitle">Browse skills and information stored in the app.</string>
+ <string name="alerts_type_hint">Uncheck every option to mute this event type.</string>
+
+ <string name="nav_profile">Profile</string>
+ <string name="community_news">Community news</string>
+ <string name="community_news_subtitle">Latest posts from @joinmocobrasil on X.</string>
+ <string name="open_x">Open X</string>
+ <string name="x_feed_note">Feed provided by X. If it does not load, use “Open X”.</string>
+ <string name="profile_title">Profile</string>
+ <string name="profile_subtitle">Your space inside mo.co hub.</string>
+ <string name="change_photo">Change photo</string>
+ <string name="name">Name</string><string name="age">Age</string><string name="bio">Short bio</string><string name="game_id">Game ID</string>
+ <string name="save_profile">Save profile</string><string name="profile_saved">Profile saved.</string><string name="enter_game_id">Enter your game ID.</string>
+ <string name="game_stats">Game stats</string><string name="game_stats_source">Public player page loaded from CellString.</string><string name="update">Refresh</string>
+ <string name="cellstring_note">The stats below are displayed from the public CellString player page.</string>
+ <string name="discord_br_subtitle">Join the Brazilian/Portuguese server</string><string name="discord_quantum_subtitle">Join the Quantum server</string>
+ <string name="paypal_unavailable">PayPal is not available yet.</string>
+
+</resources>

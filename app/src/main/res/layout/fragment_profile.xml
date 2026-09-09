@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profileScroll"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg"
+    android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil do Hunter" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seu perfil e progresso em um só lugar" android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardCornerRadius="24dp" app:cardBackgroundColor="@android:color/transparent" app:strokeColor="@color/brand" app:strokeWidth="1dp" app:cardElevation="0dp">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp" android:background="@drawable/profile_modern_gradient">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+          <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profileImage" android:layout_width="76dp" android:layout_height="76dp" android:src="@drawable/ic_profile" app:civ_border_width="2dp" app:civ_border_color="@color/brand"/>
+          <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nome" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+              <com.google.android.material.textfield.TextInputEditText android:id="@+id/editName" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/gameIdLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:hint="Hunter ID" app:helperText="6–16 letras ou números" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+              <com.google.android.material.textfield.TextInputEditText android:id="@+id/editGameId" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:textAllCaps="true" android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+          </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Bio curta" app:counterEnabled="true" app:counterMaxLength="45" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+          <com.google.android.material.textfield.TextInputEditText android:id="@+id/editBio" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="45" android:maxLines="2" android:textColor="#FFFFFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="6dp">
+          <com.google.android.material.textfield.TextInputLayout android:layout_width="110dp" android:layout_height="wrap_content" android:hint="Idade" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/editAge" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="3" android:textColor="#FFFFFF"/>
+          </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.button.MaterialButton android:id="@+id/btnChangePhoto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="FOTO" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveProfile" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:text="SALVAR"/>
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView android:id="@+id/cardFirstUse" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/brand" app:strokeWidth="1dp" android:visibility="gone">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Comece pelo seu Hunter ID" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="17sp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Digite seu Hunter ID acima e toque em SALVAR. Suas estatísticas aparecerão aqui quando estiverem disponíveis." android:textColor="@color/text_secondary" android:textSize="12sp"/>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout android:id="@+id/statsSectionHeader" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="18dp">
+      <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status do Hunter" android:textStyle="bold" android:textSize="19sp" android:textColor="@color/text_primary"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dados públicos do CellString" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+      </LinearLayout>
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnLoadStats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ATUALIZAR" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progressPlayerStats" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="center_horizontal" android:layout_marginTop="10dp" android:visibility="gone"/>
+    <TextView android:id="@+id/textStatsError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="@color/text_secondary" android:gravity="center" android:visibility="gone"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnRetryStats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:text="TENTAR NOVAMENTE" style="@style/Widget.MaterialComponents.Button.TextButton" android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/cardPlayerStats" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+      <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/profile_header" app:strokeColor="@color/brand" app:strokeWidth="1dp" app:cardElevation="0dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="17dp">
+          <TextView android:id="@+id/textStatsName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="24sp"/>
+          <TextView android:id="@+id/textStatsTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="#D9C7FF" android:textSize="12sp"/>
+          <TextView android:id="@+id/textStatsTag" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textColor="#BEB7D5" android:textSize="11sp"/>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp" app:cardElevation="0dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+          <LinearLayout android:id="@+id/btnRatingInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="◆  RATING" android:textStyle="bold" android:textSize="12sp" android:textColor="@color/text_primary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="7dp" android:text="ⓘ" android:textColor="@color/text_secondary"/>
+          </LinearLayout>
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_marginTop="4dp">
+            <TextView android:id="@+id/textRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textColor="@color/rating_gold" android:textStyle="bold" android:textSize="48sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/100" android:textColor="@color/text_secondary" android:textStyle="bold" android:textSize="20sp"/>
+          </LinearLayout>
+          <TextView android:id="@+id/textRatingTier" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Elite" android:layout_marginTop="12dp" android:textColor="@color/text_primary"/><ProgressBar android:id="@+id/progressEliteScore" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:max="100" android:progressTint="@color/rating_gold"/><TextView android:id="@+id/textEliteScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Grind" android:layout_marginTop="5dp" android:textColor="@color/text_primary"/><ProgressBar android:id="@+id/progressGrindScore" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:max="100" android:progressTint="@color/rating_blue"/><TextView android:id="@+id/textGrindScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Progression" android:layout_marginTop="5dp" android:textColor="@color/text_primary"/><ProgressBar android:id="@+id/progressProgressionScore" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:max="100" android:progressTint="@color/rating_purple"/><TextView android:id="@+id/textProgressionScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Collection" android:layout_marginTop="5dp" android:textColor="@color/text_primary"/><ProgressBar android:id="@+id/progressCollectionScore" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:max="100" android:progressTint="@color/rating_green"/><TextView android:id="@+id/textCollectionScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <TextView android:id="@+id/textStatsAvailability" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/text_secondary" android:textSize="10sp" android:gravity="center" android:visibility="gone"/>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+          <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="136dp" android:layout_weight="1" android:layout_marginEnd="5dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp" android:orientation="vertical" android:gravity="center">
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="♛" android:textColor="@color/brand" android:textSize="24sp"/>
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NÍVEL DA TEMPORADA" android:textColor="@color/text_secondary" android:textSize="9sp" android:textStyle="bold"/>
+              <TextView android:id="@+id/textCurrentLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textStyle="bold" android:textSize="28sp" android:textColor="@color/text_primary"/>
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temporada atual" android:textColor="@color/text_secondary" android:textSize="10sp"/>
+            </LinearLayout>
+          </com.google.android.material.card.MaterialCardView>
+          <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="136dp" android:layout_weight="1" android:layout_marginStart="5dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp" android:orientation="vertical" android:gravity="center">
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▥" android:textColor="@color/brand" android:textSize="24sp"/>
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CAREER LEVEL" android:textColor="@color/text_secondary" android:textSize="9sp" android:textStyle="bold"/>
+              <TextView android:id="@+id/textCareerLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textStyle="bold" android:textSize="28sp" android:textColor="@color/text_primary"/>
+              <TextView android:id="@+id/textCareerTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/success" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+          </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginTop="10dp">
+          <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="136dp" android:layout_weight="1" android:layout_marginEnd="5dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp" android:orientation="vertical" android:gravity="center">
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="◆" android:textColor="@color/brand" android:textSize="24sp"/>
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COLLECTOR LEVEL" android:textColor="@color/text_secondary" android:textSize="9sp" android:textStyle="bold"/>
+              <TextView android:id="@+id/textCollectorLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textStyle="bold" android:textSize="28sp" android:textColor="@color/text_primary"/>
+              <TextView android:id="@+id/textCollectorTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/success" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+          </com.google.android.material.card.MaterialCardView>
+          <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="136dp" android:layout_weight="1" android:layout_marginStart="5dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface" app:strokeColor="@color/divider" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp" android:orientation="vertical" android:gravity="center">
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✦" android:textColor="@color/brand" android:textSize="24sp"/>
+              <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ELITE MERITS" android:textColor="@color/text_secondary" android:textSize="9sp" android:textStyle="bold"/>
+              <TextView android:id="@+id/textEliteMerits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textStyle="bold" android:textSize="26sp" android:textColor="@color/text_primary"/>
+              <TextView android:id="@+id/textEliteMeritsTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/success" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+          </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+      </LinearLayout>
+
+      <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/surface_2" app:strokeColor="@color/divider" app:strokeWidth="1dp"><TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="15dp" android:text="ⓘ  Sobre os dados\nOs dados são obtidos de fontes públicas. A disponibilidade pode variar e o mo.co hub usa cache local para melhorar a estabilidade." android:textColor="@color/text_secondary" android:textSize="11sp"/></com.google.android.material.card.MaterialCardView>
+      <TextView android:id="@+id/textStatsUpdated" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="12dp" android:textSize="10sp" android:textColor="@color/text_secondary" android:gravity="center"/>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

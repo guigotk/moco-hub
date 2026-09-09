@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:id="@+id/widgetRoot" android:layout_width="match_parent" android:layout_height="match_parent"
+ android:orientation="vertical" android:padding="16dp" android:background="@drawable/widget_background">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+  <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@mipmap/ic_launcher"/>
+  <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="9dp" android:text="mo.co hub" android:textStyle="bold" android:textColor="#B887FF" android:textSize="13sp"/>
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PRÓXIMO" android:textStyle="bold" android:textColor="#8F8999" android:textSize="10sp"/>
+ </LinearLayout>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+  <ImageView android:id="@+id/widgetEventIcon" android:layout_width="52dp" android:layout_height="52dp" android:src="@drawable/ic_event_chaos"/>
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+   <TextView android:id="@+id/widgetEventName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="#FFFFFF" android:textSize="17sp" android:maxLines="2"/>
+   <TextView android:id="@+id/widgetEventEta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textColor="#C0BAC9" android:textSize="13sp"/>
+  </LinearLayout>
+ </LinearLayout>
+ <TextView android:id="@+id/widgetFooter" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Toque para abrir Eventos" android:textColor="#8F8999" android:textSize="10sp"/>
+</LinearLayout>
